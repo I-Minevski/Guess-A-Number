@@ -10,7 +10,14 @@ while True:
         player_guess=int(player_input)
     if player_guess==computer_number:
         print("Correct!")
-        break
+        answer=input("Do you want to play again? [y]  [n]")
+        if answer=="y":
+            continue
+        elif answer=="n":
+            break
+        else:
+            print("Invalid input. Try again.")
+            answer=input("Do you want to play again? [y]  [n]")
     if player_guess>computer_number:
         print("Too High!")
         continue
